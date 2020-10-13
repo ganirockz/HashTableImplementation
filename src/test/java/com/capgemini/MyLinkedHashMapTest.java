@@ -16,8 +16,7 @@ public class MyLinkedHashMapTest {
 				myLinkedHashMap.add(word, myLinkedHashMap.get(word) + 1);
 			}
 		}
-		int frequency = myLinkedHashMap.get("paranoid");
-		// System.out.println(frequency);
-		Assert.assertEquals(3, frequency);
+		myLinkedHashMap.delete("avoidable");
+		Assert.assertNull(myLinkedHashMap.get("avoidable"));
 	}
 }

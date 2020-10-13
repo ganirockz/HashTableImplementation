@@ -1,6 +1,6 @@
 package com.capgemini;
 
-public class MyLinkedList <K>{
+public class MyLinkedList<K> {
 	private INode<K> head;
 	private INode<K> tail;
 
@@ -42,7 +42,7 @@ public class MyLinkedList <K>{
 		}
 	}
 
-	public void addInMiddle(INode myNode) {
+	public void addInMiddle(INode<K> myNode) {
 		int middle = size() / 2;
 		int index = 0;
 		INode<K> tempNode = this.head;
@@ -77,7 +77,7 @@ public class MyLinkedList <K>{
 		}
 	}
 
-	public void delete(int nodeKey) {
+	public void delete(K nodeKey) {
 		if (size() == 0) {
 			System.out.println("No nodes to delete");
 		} else {
@@ -97,18 +97,16 @@ public class MyLinkedList <K>{
 	}
 
 	public void printMyNodes() {
-		/*INode<K> tempNode = this.head;
-		if (tempNode == null) {
-			System.out.println("No nodes present");
-		}
-		while (tempNode != null) {
-			System.out.print(tempNode.getKey() + "->");
-			tempNode = tempNode.getNext();
-		}*/
-		System.out.println("My Nodes: "+head);
+		/*
+		 * INode<K> tempNode = this.head; if (tempNode == null) {
+		 * System.out.println("No nodes present"); } while (tempNode != null) {
+		 * System.out.print(tempNode.getKey() + "->"); tempNode = tempNode.getNext(); }
+		 */
+		System.out.println("My Nodes: " + head);
 	}
+
 	public String toString() {
-		return "MylinkedList:{"+head+"};";
+		return "MylinkedList:{" + head + "};";
 	}
 
 	public INode<K> search(K k) {

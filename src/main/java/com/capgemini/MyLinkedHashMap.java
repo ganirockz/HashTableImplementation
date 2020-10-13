@@ -45,6 +45,13 @@ public class MyLinkedHashMap<K, V> {
 			myMapNode.setValue(value);
 		}
 	}
+	public void delete(K key) {
+		int index = this.getBucketIndex(key);
+		MyLinkedList<K> myLinkedList = this.myBucketArray.get(index);
+		//System.out.println(myLinkedList);
+		myLinkedList.delete(key);
+		//System.out.println(myLinkedList);
+	}
 	@Override
 	public String toString() {
 		return "The contents of LinkedHash Map are:"+myBucketArray;
